@@ -1,0 +1,9 @@
+build-idx:
+  generated-by: csolution version 2.1.0
+  csolution: The_Udder_Project.csolution.yaml
+  cprojects:
+    - cproject: The_Udder_Project.cproject.yaml
+  cbuilds:
+    - cbuild: The_Udder_Project+TheUdderProject.cbuild.yml
+      project: The_Udder_Project
+      configuration: +TheUdderProject
