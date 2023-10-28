@@ -48,7 +48,56 @@ extern int32_t check_CNT;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+void Encoder_Update(struct Encoder* enc, uint16_t CHA_PIN, uint16_t CHB_PIN){
+  enc->CHA = HAL_GPIO_ReadPin(GPIOA, CHA_PIN);
+  enc->CHB = HAL_GPIO_ReadPin(GPIOA, CHB_PIN);
+  if (enc->last_CHA == LOW && enc->CHA == HIGH)
+  {
+    if (enc->CHB == LOW)
+    {
+      enc->CNT++;
+    }
+    else if (enc->CHB == HIGH)
+    {
+      enc->CNT--;
+    }
+  }
+  else if (enc->last_CHA == HIGH && enc->CHA == LOW)
+  {
+    if (enc->CHB == LOW)
+    {
+      enc->CNT--;
+    }
+    else if (enc->CHB == HIGH)
+    {
+      enc->CNT++;
+    }
+  }
+  else if (enc->last_CHB == LOW && enc->CHB == HIGH)
+  {
+    if (enc->CHA == LOW)
+    {
+      enc->CNT--;
+    }
+    else if (enc->CHA == HIGH)
+    {
+      enc->CNT++;
+    }
+  }
+  else if (enc->last_CHB == HIGH && enc->CHB == LOW)
+  {
+    if (enc->CHA == LOW)
+    {
+      enc->CNT++;
+    }
+    else if (enc->CHA == HIGH)
+    {
+      enc->CNT--;
+    }
+  }
+  enc->last_CHA = enc->CHA;
+  enc->last_CHB = enc->CHB;
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -66,8 +115,8 @@ extern int32_t check_CNT;
 /*           Cortex-M4 Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
- * @brief This function handles Non maskable interrupt.
- */
+  * @brief This function handles Non maskable interrupt.
+  */
 void NMI_Handler(void)
 {
   /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
@@ -81,8 +130,8 @@ void NMI_Handler(void)
 }
 
 /**
- * @brief This function handles Hard fault interrupt.
- */
+  * @brief This function handles Hard fault interrupt.
+  */
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
@@ -96,8 +145,8 @@ void HardFault_Handler(void)
 }
 
 /**
- * @brief This function handles Memory management fault.
- */
+  * @brief This function handles Memory management fault.
+  */
 void MemManage_Handler(void)
 {
   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
@@ -111,8 +160,8 @@ void MemManage_Handler(void)
 }
 
 /**
- * @brief This function handles Prefetch fault, memory access fault.
- */
+  * @brief This function handles Prefetch fault, memory access fault.
+  */
 void BusFault_Handler(void)
 {
   /* USER CODE BEGIN BusFault_IRQn 0 */
@@ -126,8 +175,8 @@ void BusFault_Handler(void)
 }
 
 /**
- * @brief This function handles Undefined instruction or illegal state.
- */
+  * @brief This function handles Undefined instruction or illegal state.
+  */
 void UsageFault_Handler(void)
 {
   /* USER CODE BEGIN UsageFault_IRQn 0 */
@@ -141,8 +190,8 @@ void UsageFault_Handler(void)
 }
 
 /**
- * @brief This function handles System service call via SWI instruction.
- */
+  * @brief This function handles System service call via SWI instruction.
+  */
 void SVC_Handler(void)
 {
   /* USER CODE BEGIN SVCall_IRQn 0 */
@@ -154,8 +203,8 @@ void SVC_Handler(void)
 }
 
 /**
- * @brief This function handles Debug monitor.
- */
+  * @brief This function handles Debug monitor.
+  */
 void DebugMon_Handler(void)
 {
   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
@@ -167,8 +216,8 @@ void DebugMon_Handler(void)
 }
 
 /**
- * @brief This function handles Pendable request for system service.
- */
+  * @brief This function handles Pendable request for system service.
+  */
 void PendSV_Handler(void)
 {
   /* USER CODE BEGIN PendSV_IRQn 0 */
@@ -180,8 +229,8 @@ void PendSV_Handler(void)
 }
 
 /**
- * @brief This function handles System tick timer.
- */
+  * @brief This function handles System tick timer.
+  */
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
@@ -201,8 +250,8 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
- * @brief This function handles EXTI line1 interrupt.
- */
+  * @brief This function handles EXTI line1 interrupt.
+  */
 void EXTI1_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI1_IRQn 0 */
@@ -215,14 +264,15 @@ void EXTI1_IRQHandler(void)
 }
 
 /**
- * @brief This function handles EXTI line[9:5] interrupts.
- */
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
 void EXTI9_5_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
 
   /* USER CODE END EXTI9_5_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(WRIST_CHA_PIN);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
 
   /* USER CODE END EXTI9_5_IRQn 1 */
@@ -235,66 +285,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   // End-effector Encoder Chanal B PA7 D11
   // Motor Encoder Chanal A PA1 A1
   // Motor Encoder Chanal B PA2 D1
-  wrist_enc.CHA = HAL_GPIO_ReadPin(GPIOA, WRIST_CHA_PIN);
-  wrist_enc.CHB = HAL_GPIO_ReadPin(GPIOA, WRIST_CHB_PIN);
-  static int last_wrist_CHA = LOW;
-
-  if (last_wrist_CHA == LOW && wrist_enc.CHA == HIGH)
-  {
-    if (wrist_enc.CHB == LOW)
-    {
-      wrist_enc.CNT++;
-    }
-    else if (wrist_enc.CHB == HIGH)
-    {
-      wrist_enc.CNT--;
-    }
-  }
-  else if (last_wrist_CHA == HIGH && wrist_enc.CHA == LOW)
-  {
-    if (wrist_enc.CHB == LOW)
-    {
-      wrist_enc.CNT--;
-    }
-    else if (wrist_enc.CHB == HIGH)
-    {
-      wrist_enc.CNT++;
-    }
-  }
-  last_wrist_CHA = wrist_enc.CHA;
-  check_CNT++;
-
-  // if (motor_last_A != HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1))
-  // {
-  //   if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1))
-  //   {
-
-  //     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == 1)
-  //     {
-
-  //       motor_CNT--;
-  //       HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-  //     }
-  //     else
-  //     {
-  //       motor_CNT++;
-  //     }
-  //   }
-  //   else
-  //   {
-  //     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_2) == 1)
-  //     {
-
-  //       motor_CNT++;
-  //       HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-  //     }
-  //     else
-  //     {
-  //       motor_CNT--;
-  //     }
-  //   }
-  //   end_effector_last_A = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1);
-  //   end_effector_angle = end_effector_CNT / 2000;
-  // }
+  Encoder_Update(&wrist_enc, WRIST_CHA_PIN, WRIST_CHB_PIN);
+  Encoder_Update(&motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
+  // check_CNT++;
 }
 /* USER CODE END 1 */

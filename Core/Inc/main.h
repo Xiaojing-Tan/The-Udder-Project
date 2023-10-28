@@ -61,13 +61,17 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 #define WRIST_CHA_PIN GPIO_PIN_6
 #define WRIST_CHB_PIN GPIO_PIN_7
-#define LOW 0
-#define HIGH 1
+#define MOTOR_CHA_PIN GPIO_PIN_1
+#define MOTOR_CHB_PIN GPIO_PIN_2
+#define LOW GPIO_PIN_RESET
+#define HIGH GPIO_PIN_SET
 
 struct Encoder
 {
-  _Bool CHA;
-  _Bool CHB;
+  GPIO_PinState CHA;
+  GPIO_PinState CHB;
+  GPIO_PinState last_CHA;
+  GPIO_PinState last_CHB;
   int32_t CNT;
 };
 /* USER CODE END Private defines */

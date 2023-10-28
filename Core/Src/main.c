@@ -41,6 +41,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
 /* USER CODE BEGIN PV */
 struct Encoder wrist_enc;
 struct Encoder motor_enc;
@@ -49,9 +50,8 @@ int32_t check_CNT = 0;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-void Encoder_Init(struct Encoder enc);
 /* USER CODE BEGIN PFP */
-
+void Encoder_Init(struct Encoder enc, uint16_t CHA_PIN, uint16_t CHB_PIN);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -66,8 +66,8 @@ void Encoder_Init(struct Encoder enc);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	Encoder_Init(wrist_enc);
-	Encoder_Init(motor_enc);
+	Encoder_Init(wrist_enc, WRIST_CHA_PIN, WRIST_CHB_PIN);
+	Encoder_Init(motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -155,9 +155,11 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void Encoder_Init(struct Encoder enc){
-	enc.CHA = LOW;
-	enc.CHB = LOW;
+void Encoder_Init(struct Encoder enc, uint16_t CHA_PIN, uint16_t CHB_PIN){
+	enc.CHA = HAL_GPIO_ReadPin(GPIOA, CHA_PIN);
+	enc.CHB = HAL_GPIO_ReadPin(GPIOA, CHB_PIN);
+  enc.last_CHA = HAL_GPIO_ReadPin(GPIOA, CHA_PIN);
+	enc.last_CHB = HAL_GPIO_ReadPin(GPIOA, CHB_PIN);
 	enc.CNT = 0;
 }
 /* USER CODE END 4 */
