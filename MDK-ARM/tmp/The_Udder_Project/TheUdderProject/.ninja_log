@@ -1,25 +1,25 @@
 # ninja log v5
-20	201	7201274313821437	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Core/Src/stm32l4xx_hal_msp.o	cdff3522f2c58989
-9	200	7201274313831401	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Core/Src/stm32l4xx_it.o	e5fef2393aea619e
-760	1041	7201222504598635	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o	1452481603370bc0
-417	836	7201222501095720	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o	94fa27b36e750a7d
-20	372	7201222496940733	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Core/Src/system_stm32l4xx.o	4b7699a4118cc7a3
-14	203	7201274313821437	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Core/Src/gpio.o	a4b10697dc33a14d
-27	202	7201274313821437	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Core/Src/main.o	8eec9d7787b97f45
-35	405	7201222497163320	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o	da3dd47c4e287d5f
-49	430	7201222497657098	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o	3a3bbd0d6df0194d
-61	417	7201222497417740	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o	2f3b226984624f93
-285	613	7201222499623036	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o	218f228509bd5337
-373	658	7201222500563454	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o	42072d4e85b622a5
-659	885	7201222502813762	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o	bddc60e02683874b
-394	746	7201222500583397	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o	f9b37368f4dcb139
-431	851	7201222501838708	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o	8448fa8348d09b6c
-405	759	7201222500743048	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o	466130fd014d0cfb
-382	848	7201222501285202	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o	1bc50eb03e33482f
-614	853	7201222502414821	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o	a851208a2a5d67df
-3	104	7201274312941827	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/MDK-ARM/startup_stm32l476xx.o	183fbe0f6041ace2
-837	1003	7201222504154297	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o	d68f77b611a55371
-203	414	7201274315826265	C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/out/The_Udder_Project/TheUdderProject/The_Udder_Project.axf	48320e7713096d3e
-746	1021	7201222504344055	CMakeFiles/The_Udder_Project.dir/C_/Users/DeLaval_Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o	dba63122f57b0e73
-1	105	0	CMakeFiles/database	fad39396acea552c
-1	105	0	C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/database	fad39396acea552c
+73	534	7201652261178207	CMakeFiles/The_Udder_Project.dir/21fd2512efd55d750ea5c622f2b7ffa2/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.o	bb349c2960b1031f
+7	322	7201652260097851	CMakeFiles/The_Udder_Project.dir/ecd4f05936c7019f44ddff154228eab5/Electronics/Code/The-Udder-Project/Core/Src/main.o	8e677b52904eb309
+12	412	7201652260189445	CMakeFiles/The_Udder_Project.dir/8f47f7209319002f3d21735fc0923809/Code/The-Udder-Project/Core/Src/stm32l4xx_hal_msp.o	98595bd062bc1146
+18	453	7201652260097851	CMakeFiles/The_Udder_Project.dir/8f47f7209319002f3d21735fc0923809/Code/The-Udder-Project/Core/Src/stm32l4xx_it.o	752720f4a098e27d
+24	535	7201652261148195	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o	ca24862c9a312cf2
+52	465	7201652260413571	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.o	8fe6f97b12efd57e
+38	536	7201652261220450	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o	d9dc9385e4934466
+1	522	7201652260666830	CMakeFiles/The_Udder_Project.dir/ecd4f05936c7019f44ddff154228eab5/Electronics/Code/The-Udder-Project/Core/Src/gpio.o	8b5ba473feaf7e6d
+31	537	7201652261441664	CMakeFiles/The_Udder_Project.dir/8f47f7209319002f3d21735fc0923809/Code/The-Udder-Project/Core/Src/system_stm32l4xx.o	52a76134d0789e1c
+467	683	7201652264290797	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.o	165eac5bcc9575c8
+79	538	7201652261523449	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o	8cafa7901daa442f
+65	539	7201652261745885	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.o	8506adedb36de90e
+86	540	7201652261937097	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.o	4875e111eea21e3e
+44	541	7201652261794781	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o	8200fb77bf752acb
+94	542	7201652262255559	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o	4280848fcf666049
+108	543	7201652262704470	CMakeFiles/The_Udder_Project.dir/21fd2512efd55d750ea5c622f2b7ffa2/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.o	d75ba77e2018a2d2
+59	560	7201652263067415	CMakeFiles/The_Udder_Project.dir/8f47f7209319002f3d21735fc0923809/Code/The-Udder-Project/MDK-ARM/startup_stm32l476xx.o	a537980b59271ae
+324	652	7201652263986682	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o	2c70a5611b42c51
+454	774	7201652265203685	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o	8f80b54efda7895e
+412	732	7201652264793887	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o	359eb340921a7d7b
+525	728	7201652264736530	CMakeFiles/The_Udder_Project.dir/065a0e24afec99c6b73863db3e4db57b/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.o	be6cb1619d6f7b8d
+774	858	7201652266052873	F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/out/The_Udder_Project/TheUdderProject/The_Udder_Project.axf	e60d30e2bf633b0a
+0	45	0	CMakeFiles/database	5b73878d35cf237b
+0	45	0	F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/database	5b73878d35cf237b

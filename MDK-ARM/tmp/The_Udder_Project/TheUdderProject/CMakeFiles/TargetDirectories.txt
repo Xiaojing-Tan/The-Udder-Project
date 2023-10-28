@@ -1,4 +1,4 @@
-C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/database.dir
-C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/The_Udder_Project.dir
-C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/edit_cache.dir
-C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/rebuild_cache.dir
+F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/database.dir
+F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/The_Udder_Project.dir
+F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/edit_cache.dir
+F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/CMakeFiles/rebuild_cache.dir

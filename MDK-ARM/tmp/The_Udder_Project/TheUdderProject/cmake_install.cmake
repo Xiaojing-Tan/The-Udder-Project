@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject
+# Install script for directory: F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Apps/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

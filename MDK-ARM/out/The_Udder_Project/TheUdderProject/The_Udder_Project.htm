@@ -1,9 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
-<title>Static Call Graph - [C:\Users\DeLaval Team\Documents\The_Udder_Project\MDK-ARM\out\The_Udder_Project\TheUdderProject\The_Udder_Project.axf]</title></head>
+<title>Static Call Graph - [F:\DeLaval\DeLaval HK Project 2023 - General\Electronics\Code\The-Udder-Project\MDK-ARM\out\The_Udder_Project\TheUdderProject\The_Udder_Project.axf]</title></head>
 <body><HR>
-<H1>Static Call Graph for image C:\Users\DeLaval Team\Documents\The_Udder_Project\MDK-ARM\out\The_Udder_Project\TheUdderProject\The_Udder_Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6200002: Last Updated: Fri Oct 27 18:30:31 2023
+<H1>Static Call Graph for image F:\DeLaval\DeLaval HK Project 2023 - General\Electronics\Code\The-Udder-Project\MDK-ARM\out\The_Udder_Project\TheUdderProject\The_Udder_Project.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6200002: Last Updated: Sat Oct 28 05:00:26 2023
 <BR><P>
 <H3>Maximum Stack Usage =        248 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -53,7 +53,7 @@ Function Pointers
  <LI><a href="#[7]">DebugMon_Handler</a> from stm32l4xx_it.o(.text.DebugMon_Handler) referenced from startup_stm32l476xx.o(RESET)
  <LI><a href="#[10]">EXTI0_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
  <LI><a href="#[32]">EXTI15_10_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
- <LI><a href="#[11]">EXTI1_IRQHandler</a> from stm32l4xx_it.o(.text.EXTI1_IRQHandler) referenced from startup_stm32l476xx.o(RESET)
+ <LI><a href="#[11]">EXTI1_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
  <LI><a href="#[12]">EXTI2_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
  <LI><a href="#[13]">EXTI3_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
  <LI><a href="#[14]">EXTI4_IRQHandler</a> from startup_stm32l476xx.o(.text) referenced from startup_stm32l476xx.o(RESET)
@@ -348,6 +348,9 @@ Global Symbols
 <P><STRONG><a name="[32]"></a>EXTI15_10_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32l476xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
+<P><STRONG><a name="[11]"></a>EXTI1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32l476xx.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
+</UL>
 <P><STRONG><a name="[12]"></a>EXTI2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32l476xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
@@ -567,43 +570,49 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(.text.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
-<P><STRONG><a name="[11]"></a>EXTI1_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32l4xx_it.o(.text.EXTI1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = EXTI1_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; HAL_GPIO_TogglePin
+<P><STRONG><a name="[21]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32l4xx_it.o(.text.EXTI9_5_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = EXTI9_5_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; Encoder_Update &rArr; HAL_GPIO_ReadPin
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
-<P><STRONG><a name="[21]"></a>EXTI9_5_IRQHandler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32l4xx_it.o(.text.EXTI9_5_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = EXTI9_5_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; HAL_GPIO_TogglePin
+<P><STRONG><a name="[72]"></a>Encoder_Init</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, main.o(.text.Encoder_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Encoder_Init &rArr; HAL_GPIO_ReadPin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
+
+<P><STRONG><a name="[74]"></a>Encoder_Update</STRONG> (Thumb, 310 bytes, Stack size 24 bytes, stm32l4xx_it.o(.text.Encoder_Update))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Encoder_Update &rArr; HAL_GPIO_ReadPin
+</UL>
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
+</UL>
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+</UL>
+
 <P><STRONG><a name="[90]"></a>Error_Handler</STRONG> (Thumb, 14 bytes, Stack size 4 bytes, main.o(.text.Error_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[72]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 494 bytes, Stack size 24 bytes, stm32l4xx_it.o(.text.HAL_GPIO_EXTI_Callback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = HAL_GPIO_EXTI_Callback &rArr; HAL_GPIO_TogglePin
+<P><STRONG><a name="[75]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, stm32l4xx_it.o(.text.HAL_GPIO_EXTI_Callback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HAL_GPIO_EXTI_Callback &rArr; Encoder_Update &rArr; HAL_GPIO_ReadPin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_TogglePin
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_Update
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_IRQHandler
 </UL>
 
 <P><STRONG><a name="[71]"></a>HAL_GPIO_EXTI_IRQHandler</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, stm32l4xx_hal_gpio.o(.text.HAL_GPIO_EXTI_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; HAL_GPIO_TogglePin
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; Encoder_Update &rArr; HAL_GPIO_ReadPin
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
-<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 </UL>
 
 <P><STRONG><a name="[8a]"></a>HAL_GPIO_Init</STRONG> (Thumb, 962 bytes, Stack size 48 bytes, stm32l4xx_hal_gpio.o(.text.HAL_GPIO_Init))
@@ -615,13 +624,8 @@ Global Symbols
 <P><STRONG><a name="[73]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, stm32l4xx_hal_gpio.o(.text.HAL_GPIO_ReadPin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_GPIO_ReadPin
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
-</UL>
-
-<P><STRONG><a name="[74]"></a>HAL_GPIO_TogglePin</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, stm32l4xx_hal_gpio.o(.text.HAL_GPIO_TogglePin))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_GPIO_TogglePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_Update
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_Init
 </UL>
 
 <P><STRONG><a name="[89]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, stm32l4xx_hal_gpio.o(.text.HAL_GPIO_WritePin))
@@ -742,7 +746,7 @@ Global Symbols
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32l4xx_it.o(.text.HardFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
-<P><STRONG><a name="[88]"></a>MX_GPIO_Init</STRONG> (Thumb, 226 bytes, Stack size 72 bytes, gpio.o(.text.MX_GPIO_Init))
+<P><STRONG><a name="[88]"></a>MX_GPIO_Init</STRONG> (Thumb, 222 bytes, Stack size 72 bytes, gpio.o(.text.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = MX_GPIO_Init &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
@@ -791,30 +795,25 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32l4xx_it.o(.text.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l476xx.o(RESET)
 </UL>
-<P><STRONG><a name="[68]"></a>main</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, main.o(.text.main))
+<P><STRONG><a name="[68]"></a>main</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248 + Unknown Stack Size
 <LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_OscConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Encoder_Init
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[75]"></a>__aeabi_i2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt))
-<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
-</UL>
-
-<P><STRONG><a name="[bf]"></a>_dflt</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt), UNUSED)
-
 <P><STRONG><a name="[62]"></a>_fp_init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
 <BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[c0]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[bf]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[c1]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[c0]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 <P>
 <H3>
 Local Symbols

@@ -59,10 +59,14 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 
 /* USER CODE BEGIN Private defines */
+// End-effector Encoder Chanal A PA6 D12
+// End-effector Encoder Chanal B PA7 D11
+// Motor Encoder Chanal A PA8 D7
+// Motor Encoder Chanal B PA9 D8
 #define WRIST_CHA_PIN GPIO_PIN_6
 #define WRIST_CHB_PIN GPIO_PIN_7
-#define MOTOR_CHA_PIN GPIO_PIN_1
-#define MOTOR_CHB_PIN GPIO_PIN_2
+#define MOTOR_CHA_PIN GPIO_PIN_8
+#define MOTOR_CHB_PIN GPIO_PIN_9
 #define LOW GPIO_PIN_RESET
 #define HIGH GPIO_PIN_SET
 
