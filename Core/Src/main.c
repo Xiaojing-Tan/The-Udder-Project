@@ -18,11 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "gpio.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "Controller.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -45,6 +47,7 @@
 /* USER CODE BEGIN PV */
 struct Encoder wrist_enc;
 struct Encoder motor_enc;
+int32_t Ref = 0;
 int32_t check_CNT = 0;
 /* USER CODE END PV */
 
@@ -88,8 +91,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,12 +101,20 @@ int main(void)
   while (1)
   {
     // HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_10);
-    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-    HAL_Delay(100);
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, 100);
+    Ref = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
 		
+
+		check_CNT+=1;
+		Pos_Control(Ref, &wrist_enc);
+		check_CNT+=1;
+		HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
@@ -165,6 +177,12 @@ void Encoder_Init(struct Encoder* enc, uint16_t CHA_PIN, uint16_t CHB_PIN){
 	enc->last_CHB = HAL_GPIO_ReadPin(GPIOA, CHB_PIN);
 	enc->CNT = 0;
 }
+
+// void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) 
+// {
+// 	Ref = HAL_ADC_GetValue(hadc);
+// }
+
 /* USER CODE END 4 */
 
 /**

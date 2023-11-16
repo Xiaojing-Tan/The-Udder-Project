@@ -24,9 +24,17 @@ void Set_Valve2(void)
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
 }
 
-void Pos_Control(int32_t ref, struct Encoder* enc)
+/*
+Brief : Controller for motor
+Parameters: 
+	@double ref: The reference angle
+	@struct Encoder* enc: The encoder type, can be &wrist_enc or &motor_enc
+*/
+
+void Pos_Control(double ref, struct Encoder* enc) 
 {
-	int32_t err = 0;
+	double err = 0;
+	double ang = 0;
 	Set_Valve1();
 	Set_Valve2();
 	HAL_Delay(1000);

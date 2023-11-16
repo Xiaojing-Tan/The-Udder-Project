@@ -1,0 +1,10 @@
+1.Encoders
+We set PA6, PA7, PA8 and PA9 as external interruppt(EXTI) to count the pulse from the encoder. 
+For wrist encoder, PA6 is for channel A and PA7 is for channel B.
+For motor encoder, PA8 is for channel A and PA9 is for channel B.
+
+2.Button
+PA7 is setted as ADC input. We need to connect this pin with the POS wire of the Button board.
+
+3.Pin map
+You can find the Pin map in this link: https://os.mbed.com/platforms/ST-Nucleo-L476RG/

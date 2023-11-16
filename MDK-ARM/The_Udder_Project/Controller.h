@@ -7,6 +7,6 @@ void Reset_Valve1(void);
 void Reset_Valve2(void);
 void Set_Valve1(void);
 void Set_Valve2(void);
-void Pos_Control(int32_t ref, struct Encoder* enc);
+void Pos_Control(double ref, struct Encoder* enc);
 
 #endif

@@ -1,6 +1,5 @@
-the_udder_project/stm32l4xx_hal_gpio.o: \
-  ..\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_gpio.c \
-  ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
+the_udder_project/adc.o: ..\Core\Src\adc.c ..\Core\Inc\adc.h \
+  ..\Core\Inc\main.h ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal.h \
   ..\Core\Inc\stm32l4xx_hal_conf.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_rcc.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_def.h \

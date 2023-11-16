@@ -1,2 +1,4 @@
 CompileFlags:
-  CompilationDatabase: tmp\The_Udder_Project\TheUdderProject
+  CompilationDatabase: >-
+    c:\Users\DeLaval
+    Team\Documents\The_Udder_Project\MDK-ARM\tmp\The_Udder_Project\TheUdderProject

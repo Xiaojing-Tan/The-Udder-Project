@@ -44,6 +44,7 @@
 extern struct Encoder wrist_enc;
 extern struct Encoder motor_enc;
 extern int32_t check_CNT;
+extern int32_t Ref;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -267,12 +268,10 @@ void EXTI9_5_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) 
 {
   Encoder_Update(&wrist_enc, WRIST_CHA_PIN, WRIST_CHB_PIN);
   Encoder_Update(&motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
   // check_CNT++;
 }
-
-
 /* USER CODE END 1 */
