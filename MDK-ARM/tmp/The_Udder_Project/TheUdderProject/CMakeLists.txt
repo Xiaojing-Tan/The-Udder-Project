@@ -1,4 +1,4 @@
-# CMSIS Build CMakeLists generated on 2023-10-28T05:00:19
+# CMSIS Build CMakeLists generated on 2023-11-02T14:33:48
 
 cmake_minimum_required(VERSION 3.22)
 
@@ -6,9 +6,9 @@ cmake_minimum_required(VERSION 3.22)
 
 set(TARGET The_Udder_Project)
 set(CPU Cortex-M4)
-set(PRJ_DIR "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM")
-set(OUT_DIR "F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/out/The_Udder_Project/TheUdderProject")
-set(INT_DIR "F:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject")
+set(PRJ_DIR "c:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM")
+set(OUT_DIR "C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/out/The_Udder_Project/TheUdderProject")
+set(INT_DIR "C:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/tmp/The_Udder_Project/TheUdderProject")
 set(FPU SP_FPU)
 set(DSP DSP)
 set(SECURE Non-secure)
@@ -19,7 +19,7 @@ set(AS_FLAGS_GLOBAL "-masm=auto")
 set(CC_FLAGS_GLOBAL "-std=c99 -fno-rtti -funsigned-char -fshort-enums -fshort-wchar -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality")
 set(CXX_FLAGS_GLOBAL "-xc++ -std=c++03 -fno-rtti -funsigned-char -fshort-enums -fshort-wchar -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality")
 set(LD_FLAGS_GLOBAL "--map --load_addr_map_info --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers --list --strict --summary_stderr --info summarysizes")
-set(LD_SCRIPT "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/The_Udder_Project_TheUdderProject.sct")
+set(LD_SCRIPT "c:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/The_Udder_Project_TheUdderProject.sct")
 
 set(DEFINES
   STM32L476xx
@@ -28,50 +28,50 @@ set(DEFINES
 )
 
 set(INC_PATHS
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Inc"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Inc"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/CMSIS/Include"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/RTE/_TheUdderProject"
-  "C:/Users/XJTan/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"
-  "C:/Users/XJTan/AppData/Local/arm/packs/Keil/STM32L4xx_DFP/2.6.2/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Inc"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Inc"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/CMSIS/Include"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/RTE/_TheUdderProject"
+  "C:/Users/DeLaval Team/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include"
+  "C:/Users/DeLaval Team/AppData/Local/arm/packs/Keil/STM32L4xx_DFP/2.6.2/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
 )
 
 set(AS_ARM_SRC_FILES
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/MDK-ARM/startup_stm32l476xx.s"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/MDK-ARM/startup_stm32l476xx.s"
 )
 
 set(CC_SRC_FILES
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Src/gpio.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Src/main.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Src/stm32l4xx_hal_msp.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Src/stm32l4xx_it.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Core/Src/system_stm32l4xx.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c"
-  "f:/DeLaval/DeLaval HK Project 2023 - General/Electronics/Code/The-Udder-Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Src/gpio.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Src/main.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Src/stm32l4xx_hal_msp.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Src/stm32l4xx_it.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Core/Src/system_stm32l4xx.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ramfunc.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c"
+  "c:/Users/DeLaval Team/Documents/The_Udder_Project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c"
 )
 
 # Toolchain config map
 
-set(REGISTERED_TOOLCHAIN_ROOT "c:/Users/XJTan/.vcpkg/artifacts/vcpkg-artifacts-arm/compilers.arm.armclang/6.20.0/bin")
+set(REGISTERED_TOOLCHAIN_ROOT "c:/Users/DeLaval Team/.vcpkg/artifacts/vcpkg-artifacts-arm/compilers.arm.armclang/6.20.0/bin")
 set(REGISTERED_TOOLCHAIN_VERSION "6.20.0")
 set(TOOLCHAIN_VERSION_MIN "6.20.0")
-include ("C:/Users/XJTan/.vcpkg/artifacts/vcpkg-artifacts-arm/tools.open.cmsis.pack.cmsis.toolbox/2.1.0/etc/AC6.6.18.0.cmake")
-include ("C:/Users/XJTan/.vcpkg/artifacts/vcpkg-artifacts-arm/tools.open.cmsis.pack.cmsis.toolbox/2.1.0/etc/CMSIS-Build-Utils.cmake")
+include ("C:/Users/DeLaval Team/.vcpkg/artifacts/vcpkg-artifacts-arm/tools.open.cmsis.pack.cmsis.toolbox/2.1.0/etc/AC6.6.18.0.cmake")
+include ("C:/Users/DeLaval Team/.vcpkg/artifacts/vcpkg-artifacts-arm/tools.open.cmsis.pack.cmsis.toolbox/2.1.0/etc/CMSIS-Build-Utils.cmake")
 
 # Setup project
 

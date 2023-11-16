@@ -1,4 +1,2 @@
 CompileFlags:
-  CompilationDatabase: >-
-    f:\DeLaval\DeLaval HK Project 2023 -
-    General\Electronics\Code\The-Udder-Project\MDK-ARM\tmp\The_Udder_Project\TheUdderProject
+  CompilationDatabase: tmp\The_Udder_Project\TheUdderProject

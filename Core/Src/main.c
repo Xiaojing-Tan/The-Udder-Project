@@ -22,6 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "Controller.h"
 
 /* USER CODE END Includes */
 
@@ -96,10 +97,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		
+		Pos_Control(300, &wrist_enc);
+		// Pos_Control(1000, &motor_enc);
   }
   /* USER CODE END 3 */
 }

@@ -273,4 +273,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   Encoder_Update(&motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
   // check_CNT++;
 }
+
+
 /* USER CODE END 1 */

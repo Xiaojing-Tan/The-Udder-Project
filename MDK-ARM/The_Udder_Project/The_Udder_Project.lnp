@@ -1,5 +1,6 @@
 --cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
 "the_udder_project\startup_stm32l476xx.o"
+"the_udder_project\controller.o"
 "the_udder_project\main.o"
 "the_udder_project\gpio.o"
 "the_udder_project\stm32l4xx_it.o"
