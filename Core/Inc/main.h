@@ -57,6 +57,32 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Rotate_left_output_Pin GPIO_PIN_0
+#define Rotate_left_output_GPIO_Port GPIOA
+#define Rotate_right_output_Pin GPIO_PIN_1
+#define Rotate_right_output_GPIO_Port GPIOA
+#define Debug_light_Pin GPIO_PIN_5
+#define Debug_light_GPIO_Port GPIOA
+#define Gripper_encoder_ChA_Pin GPIO_PIN_6
+#define Gripper_encoder_ChA_GPIO_Port GPIOA
+#define Gripper_encoder_ChA_EXTI_IRQn EXTI9_5_IRQn
+#define Gripper_encoder_ChB_Pin GPIO_PIN_7
+#define Gripper_encoder_ChB_GPIO_Port GPIOA
+#define Gripper_encoder_ChB_EXTI_IRQn EXTI9_5_IRQn
+#define Magnet_off_input_signal_Pin GPIO_PIN_10
+#define Magnet_off_input_signal_GPIO_Port GPIOB
+#define Magnet_off_output_Pin GPIO_PIN_7
+#define Magnet_off_output_GPIO_Port GPIOC
+#define Motor_encoder_ChA_Pin GPIO_PIN_8
+#define Motor_encoder_ChA_GPIO_Port GPIOA
+#define Motor_encoder_ChA_EXTI_IRQn EXTI9_5_IRQn
+#define Motor_encoder_Ch9_Pin GPIO_PIN_9
+#define Motor_encoder_Ch9_GPIO_Port GPIOA
+#define Motor_encoder_Ch9_EXTI_IRQn EXTI9_5_IRQn
+#define Magnet_on_input_signal_Pin GPIO_PIN_4
+#define Magnet_on_input_signal_GPIO_Port GPIOB
+#define Magnet_on_output_Pin GPIO_PIN_6
+#define Magnet_on_output_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 // End-effector Encoder Chanal A PA6 D12
