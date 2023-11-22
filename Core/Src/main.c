@@ -68,8 +68,7 @@ void Encoder_Init(struct Encoder* enc, uint16_t CHA_PIN, uint16_t CHB_PIN);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	Encoder_Init(&wrist_enc, WRIST_CHA_PIN, WRIST_CHB_PIN);
-	Encoder_Init(&motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
+	
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -92,7 +91,13 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-	
+	Reset_Valve1();
+	Set_Valve2();
+	HAL_Delay(3000);
+	Reset_Valve1();
+	Reset_Valve2();
+	Encoder_Init(&wrist_enc, WRIST_CHA_PIN, WRIST_CHB_PIN);
+	Encoder_Init(&motor_enc, MOTOR_CHA_PIN, MOTOR_CHB_PIN);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,16 +109,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, 100);
-    Ref = HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
+		//HAL_ADC_Start(&hadc1);
+		//HAL_ADC_PollForConversion(&hadc1, 100);
+    //Ref = HAL_ADC_GetValue(&hadc1);
+		//HAL_ADC_Stop(&hadc1);
 		
-
-		check_CNT+=1;
-		Pos_Control(Ref, &wrist_enc);
-		check_CNT+=1;
-		HAL_Delay(500);
+    //Ref = 200;
+		//check_CNT+=1;
+		Pos_Control(500, &motor_enc);
+		//check_CNT+=1;
+		// HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }

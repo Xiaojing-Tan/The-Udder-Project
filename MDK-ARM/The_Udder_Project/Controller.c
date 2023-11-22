@@ -34,26 +34,27 @@ Parameters:
 void Pos_Control(double ref, struct Encoder* enc) 
 {
 	double err = 0;
-	double ang = 0;
-	Set_Valve1();
-	Set_Valve2();
-	HAL_Delay(1000);
+	//Set_Valve1();
+	//Set_Valve2();
+	//HAL_Delay(1000);
 	while(1)
 	{
 		//Calculate error
 		err = ref - enc->CNT;
 		if(err < 0) //Turn right
 		{
-			Reset_Valve1(); // PA0 = LOW
-			Set_Valve2();   // PA1 = HIGH
+			Set_Valve2(); // PA0 = LOW
+			Reset_Valve1();   // PA1 = HIGH
 		}
 		else if(err > 0)//Turn left
 		{
-			Set_Valve1();   // PA0 = HIGH
-			Reset_Valve2(); // PA1 = LOW
+			Reset_Valve2();   // PA0 = HIGH
+			Set_Valve1(); // PA1 = LOW
 		}
 		else // If the angle is in side the threshold
 		{
+			Reset_Valve1();
+			Reset_Valve2();
 			break;
 		}
 	}

@@ -30,6 +30,4 @@ the_udder_project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_flash_ramfunc.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr.h \
   ..\Drivers\STM32L4xx_HAL_Driver\Inc\stm32l4xx_hal_pwr_ex.h \
-  ..\Core\Inc\adc.h ..\Core\Inc\gpio.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  The_Udder_Project\Controller.h
+  ..\Core\Inc\adc.h ..\Core\Inc\gpio.h The_Udder_Project\Controller.h
