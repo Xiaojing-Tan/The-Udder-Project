@@ -17,7 +17,7 @@
 | Position right | PA1 | A1 |
 
 ## Threads
-1. Receiving the position signal (analog) and magnet signal (digital), read data from motor encoder and gripper encoder
+1. Receiving the position signal (analog) and magnet signal (digital), read data from motor encoder and gripper encoder 
    Excute at 100Hz
-2. Control and actuate the magnet and pnuematic motor (4 solenoids)
+2. Control and actuate the magnet and pnuematic motor (4 solenoids) 
    Excute until reach the reference
