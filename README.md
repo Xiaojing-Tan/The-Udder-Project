@@ -5,7 +5,7 @@
 
 | Function | Chip pinout | Board pinout |
 | :---: | :---: | :---: |
-| Magnet control | PB4 | D5 |
+| Magnet control | PB10 | D6 |
 | Position control| PC1 | A4 |
 | Gripper encoder CHA | PA6 | D12 |
 | Gripper encoder CHB | PA7 | D11 |
