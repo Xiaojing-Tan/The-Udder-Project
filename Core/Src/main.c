@@ -20,14 +20,14 @@
 #include "main.h"
 #include "adc.h"
 #include "tim.h"
-#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include "peripherals.h"
+#include "application.h"
 #include "controller.h"
+#include "peripherals.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -37,10 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define MOTOR_RANGE 1360
-#define WRIST_RANGE 700
-/* 700~61.5 degrees, Zero position is 319~28 degrees */
-#define ADC_RANGE 3800
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,12 +48,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-// struct Encoder wrist_enc;
-// struct Encoder motor_enc;
-uint32_t mycnt = 0;
-int32_t motor_ref, motor_cnt, wrist_ref, wrist_cnt = 0;
 
-static uint32_t read = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,7 +59,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint32_t Main_GetTickMillisec(void) {return HAL_GetTick();}
 /* USER CODE END 0 */
 
 /**
@@ -93,45 +85,26 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-	
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_ADC1_Init();
-  MX_USART2_UART_Init();
-  MX_TIM3_Init();
   MX_TIM1_Init();
-  MX_TIM2_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  /* Set the gripper to initial position and reset the encoder */
-	Reset_Valve1();
-	Set_Valve2();
-	HAL_Delay(3000);
-	Reset_Valve1();
-	Reset_Valve2();
-	__HAL_TIM_SET_COUNTER(&htim1, 0);
-	__HAL_TIM_SET_COUNTER(&htim3, 0);
-  /* Start the timer */
-	HAL_TIM_Base_Start_IT(&htim2);
+	Application_Setup();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		Application_Loop();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		motor_cnt = Read_Timer_Encoder(TIM1);
-    wrist_cnt = Read_Timer_Encoder(TIM3);
-		
-    Reference_Update(&read);
-		motor_ref = read*MOTOR_RANGE/ADC_RANGE;
-		wrist_ref = read*WRIST_RANGE/ADC_RANGE;
-
-		// Pos_Control(motor_ref, motor_cnt);
-    Pos_Control(wrist_ref, wrist_cnt);
   }
   /* USER CODE END 3 */
 }
@@ -155,14 +128,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_MSI;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 20;
+  RCC_OscInitStruct.PLL.PLLN = 10;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
@@ -176,7 +148,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 

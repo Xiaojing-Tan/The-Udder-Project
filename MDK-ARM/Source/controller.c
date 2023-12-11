@@ -1,4 +1,4 @@
-#include "controller.h"
+#include "Controller.h"
 
 //Valve1 is PA0
 //Valve2 is PA1
@@ -30,25 +30,46 @@ Parameters:
 	@struct Encoder* enc: The encoder type, can be &wrist_enc or &motor_enc
 */
 
-void Pos_Control(int32_t ref, int32_t cnt) 
+void Pos_Control(double ref, struct Encoder* enc) 
 {
-    //Calculate error
-	int32_t err = ref - cnt;
-
-    if(err < -5) //Turn right
-    {
-        Set_Valve2(); // PA0 = LOW
-        Reset_Valve1();   // PA1 = HIGH
-    }
-    else if(err > 5)//Turn left
-    {
-        Reset_Valve2();   // PA0 = HIGH
-        Set_Valve1(); // PA1 = LOW
-    }
-    else // If the angle is in side the threshold
-    { 
-        Reset_Valve1();
-        Reset_Valve2();
-        
-    }
+	double err = 0;
+	//Set_Valve1();
+	//Set_Valve2();
+	//HAL_Delay(1000);
+	while(1)
+	{
+		//Calculate error
+		err = ref - enc->CNT;
+		if(err < 0) //Turn right
+		{
+			Set_Valve2(); // PA0 = LOW
+			Reset_Valve1();   // PA1 = HIGH
+		}
+		else if(err > 0)//Turn left
+		{
+			Reset_Valve2();   // PA0 = HIGH
+			Set_Valve1(); // PA1 = LOW
+		}
+		else // If the angle is in side the threshold
+		{
+			Reset_Valve1();
+			Reset_Valve2();
+			break;
+		}
+	}
 }
+
+void Magnet_Control(uint16_t mag_switch){
+	if (mag_switch == HIGH){
+		HAL_GPIO_WritePin(GPIOA, MAGNET_OFF_PIN, LOW);
+		HAL_GPIO_WritePin(GPIOA, MAGNET_ON_PIN, HIGH);
+	}
+	else{
+		HAL_GPIO_WritePin(GPIOA, MAGNET_ON_PIN, LOW);
+		HAL_GPIO_WritePin(GPIOA, MAGNET_OFF_PIN, HIGH);
+	}
+}
+
+
+
+

@@ -1,0 +1,145 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Xiaojing Tan
+KTH
+User-based license: Keil MDK Community
+Valid until: Jun 1 2033. Cached until: Dec 3 2023
+ 
+Tool Versions:
+Toolchain:       Keil MDK Community  Version: 5.38.0.0
+Toolchain Path:  C:\Apps\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+F:\The_Udder_Project_RTOS\MDK-ARM\The_Udder_Project_RTOS.uvprojx
+Project File Date:  11/27/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Apps\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'The_Udder_Project_RTOS'
+Error instantiating RTE components
+Error #546: Required gpdsc file 'F:/The_Udder_Project_RTOS/MDK-ARM/RTE/Device/STM32L476RGTx/FrameworkCubeMX.gpdsc' is not loaded, errors by load
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: RTOS Version: 1.0.0
+   * Component: CORE Version: 5.6.0
+   * Component: Keil RTX Version: 4.82.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.ARM_Compiler.1.7.2.pack
+                Keil.ARM_Compiler.1.7.2
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDOUT Variant: ITM Version: 1.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32L4xx_DFP.2.6.2.pack
+                Keil.STM32L4xx_DFP.2.6.2
+                STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.1.0
+   * Component: STM32CubeMX Version: 1.1.0
+   * Component: Common Version: 1.13.0
+   * Component: Cortex Version: 1.13.0
+   * Component: DMA Version: 1.13.0
+   * Component: GPIO Version: 1.13.0
+   * Component: PWR Version: 1.13.0
+   * Component: RCC Version: 1.13.0
+   * Component: SPI Version: 1.13.0
+   * Component: TIM Version: 1.13.0
+   * Component: Startup Version: 1.3.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_The_Udder_Project_RTOS
+  C:/Apps/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Apps/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS/RTX/INC
+  C:/Apps/Arm/Packs/Keil/STM32L4xx_DFP/2.6.2/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+  C:/Apps/Arm/Packs/Keil/STM32L4xx_DFP/2.6.2/Drivers/STM32L4xx_HAL_Driver/Inc
+  C:/Apps/Arm/Packs/Keil/STM32L4xx_DFP/2.6.2/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS:1.0.0 (API)
+
+   * Component: ::Device:STM32Cube Framework:1.1.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+
+   * Component: ARM::CMSIS:RTOS:Keil RTX:4.82.0
+      Include file:  CMSIS/RTOS/RTX/INC/cmsis_os.h
+      Source file:   CMSIS/RTOS/RTX/Templates/RTX_Conf_CM.c
+      Include file:  CMSIS/RTOS/RTX/UserCodeTemplates/osObjects.h
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Thread.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Mutex.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Timer.c
+      Source file:   CMSIS/RTOS/RTX/SRC/ARM/SVC_Table.s
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/main.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MemPool.c
+      Library file:  CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MsgQueue.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/MailQueue.c
+      Source file:   CMSIS/RTOS/RTX/UserCodeTemplates/Semaphore.c
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0
+      Source file:   MDK/CubeMX/run_STM32CubeMX.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.13.0
+      Include file:  Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.c
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c
+
+   * Component: Keil::Device:STM32Cube HAL:SPI:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.c
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:TIM:1.13.0
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c
+      Source file:   Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c
+
+   * Component: Keil::Device:Startup:1.3.1
+      Source file:   MDK/Device/Source/ARM/STM32L4xx_DB_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/arm/startup_stm32l476xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

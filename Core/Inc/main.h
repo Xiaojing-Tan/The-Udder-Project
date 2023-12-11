@@ -53,18 +53,12 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+uint32_t Main_GetTickMillisec(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Gripprt_position_input_Pin GPIO_PIN_1
-#define Gripprt_position_input_GPIO_Port GPIOC
-#define Rotate_left_output_Pin GPIO_PIN_0
-#define Rotate_left_output_GPIO_Port GPIOA
-#define Rotate_right_output_Pin GPIO_PIN_1
-#define Rotate_right_output_GPIO_Port GPIOA
-#define Debug_light_Pin GPIO_PIN_5
-#define Debug_light_GPIO_Port GPIOA
+#define LD2_Pin GPIO_PIN_5
+#define LD2_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

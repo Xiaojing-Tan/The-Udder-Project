@@ -4,7 +4,10 @@
 extern "C" {
 #endif
 
-#include "stm32l4xx_hal.h"
+#include <stdint.h>
+#include "peripherals.h"
+
+
 
 /* Exported functions prototypes ---------------------------------------------*/
 
@@ -12,7 +15,8 @@ void Reset_Valve1(void);
 void Reset_Valve2(void);
 void Set_Valve1(void);
 void Set_Valve2(void);
-void Pos_Control(int32_t ref, int32_t cnt);
+void Pos_Control(double ref, struct Encoder* enc);
+void Magnet_Control(uint16_t mag_switch);
 
 #ifdef __cplusplus
  }

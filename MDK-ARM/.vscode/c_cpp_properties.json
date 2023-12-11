@@ -1,18 +1,18 @@
 {
     "configurations": [
         {
-            "name": "The_Udder_Project",
+            "name": "The_Udder_Project_RTOS",
             "includePath": [
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Core\\Inc",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Drivers\\STM32L4xx_HAL_Driver\\Inc",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Drivers\\STM32L4xx_HAL_Driver\\Inc\\Legacy",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Drivers\\CMSIS\\Device\\ST\\STM32L4xx\\Include",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Drivers\\CMSIS\\Include",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\MDK-ARM\\Include",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\MDK-ARM",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Core\\Src",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\MDK-ARM\\Source",
-                "c:\\Users\\XJTan\\Desktop\\The_Udder_Project\\Drivers\\STM32L4xx_HAL_Driver\\Src"
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Core\\Inc",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Drivers\\STM32L4xx_HAL_Driver\\Inc",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Drivers\\STM32L4xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Drivers\\CMSIS\\Device\\ST\\STM32L4xx\\Include",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Drivers\\CMSIS\\Include",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\MDK-ARM\\Include",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\MDK-ARM",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\MDK-ARM\\Source",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Core\\Src",
+                "e:\\OneDrive - KTH\\The_Udder_Project_RTOS\\Drivers\\STM32L4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
